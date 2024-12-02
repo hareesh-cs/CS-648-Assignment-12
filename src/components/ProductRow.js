@@ -18,7 +18,7 @@ class ProductRow extends React.Component {
         <td>{product.category}</td>
         <td>{product.price}</td>
         <td>
-          <button onClick={this.destroy} className="btn btn-danger btn-sm">
+          <button onClick={this.destroy} className="btn btn-info btn-sm">
             Delete
           </button>
         </td>

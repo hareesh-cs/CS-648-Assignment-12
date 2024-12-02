@@ -1,14 +1,14 @@
 import logo from "./logo.svg";
 import "./App.css";
-import "bootstrap";
+import 'bootstrap/dist/css/bootstrap.min.css';
 import Products from "./components/Product";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
+    <div className="container">
+      <div className="card">
         <Products />
-      </header>
+      </div>
     </div>
   );
 }

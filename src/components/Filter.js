@@ -1,9 +1,7 @@
 import React from 'react';
 
 function Filter({ filterText, onFilter }) {
-  const handleChange = (e) => {
-    onFilter(e.target.value);
-  };
+  const handleChange = (e) => onFilter(e.target.value);
 
   return (
     <form>
@@ -12,7 +10,7 @@ function Filter({ filterText, onFilter }) {
         placeholder="Search..."
         value={filterText}
         onChange={handleChange}
-        className="form-control mb-3"
+        className="form-control"
       />
     </form>
   );

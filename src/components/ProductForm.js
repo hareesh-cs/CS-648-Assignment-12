@@ -1,6 +1,6 @@
-import React from 'react';
+import React from "react";
 
-const RESET_VALUES = { id: '', category: '', price: '', name: '' };
+const RESET_VALUES = { id: "", category: "", price: "", name: "" };
 
 class ProductForm extends React.Component {
   constructor(props) {
@@ -27,31 +27,49 @@ class ProductForm extends React.Component {
 
   render() {
     return (
-      <form onSubmit={this.handleSave}>
-        <input
-          type="text"
-          name="name"
-          placeholder="Name"
-          value={this.state.product.name}
-          onChange={this.handleChange}
-          className="form-control mb-2"
-        />
-        <input
-          type="text"
-          name="category"
-          placeholder="Category"
-          value={this.state.product.category}
-          onChange={this.handleChange}
-          className="form-control mb-2"
-        />
-        <input
-          type="text"
-          name="price"
-          placeholder="Price"
-          value={this.state.product.price}
-          onChange={this.handleChange}
-          className="form-control mb-2"
-        />
+      <form onSubmit={this.handleSave} className="mt-4">
+        <div className="mb-3">
+          <label htmlFor="name" className="form-label">
+            Name
+          </label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Name"
+            value={this.state.product.name}
+            onChange={this.handleChange}
+            className="form-control"
+          />
+        </div>
+        <div className="mb-3">
+          <label htmlFor="category" className="form-label">
+            Category
+          </label>
+          <input
+            type="text"
+            id="category"
+            name="category"
+            placeholder="Category"
+            value={this.state.product.category}
+            onChange={this.handleChange}
+            className="form-control"
+          />
+        </div>
+        <div className="mb-3">
+          <label htmlFor="price" className="form-label">
+            Price
+          </label>
+          <input
+            type="text"
+            id="price"
+            name="price"
+            placeholder="Price"
+            value={this.state.product.price}
+            onChange={this.handleChange}
+            className="form-control"
+          />
+        </div>
         <button type="submit" className="btn btn-primary">
           Save
         </button>
