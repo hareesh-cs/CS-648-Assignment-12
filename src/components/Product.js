@@ -45,17 +45,25 @@ class Products extends React.Component {
 
   render() {
     return (
-      <div>
-        <Filter
-          filterText={this.state.filterText}
-          onFilter={this.handleFilter}
-        />
-        <ProductTable
-          products={this.state.products}
-          filterText={this.state.filterText}
-          onDestroy={this.handleDestroy}
-        />
-        <ProductForm onSave={this.handleSave} />
+      <div className="container">
+        <div className="card shadow p-4 mb-4">
+          <h2 className="text-center">My Inventory</h2>
+          <Filter
+            filterText={this.state.filterText}
+            onFilter={this.handleFilter}
+          />
+        </div>
+        <div className="card shadow p-4 mb-4">
+          <ProductTable
+            products={this.state.products}
+            filterText={this.state.filterText}
+            onDestroy={this.handleDestroy}
+          />
+        </div>
+        <div className="card shadow p-4">
+          <h4>Add a New Product</h4>
+          <ProductForm onSave={this.handleSave} />
+        </div>
       </div>
     );
   }

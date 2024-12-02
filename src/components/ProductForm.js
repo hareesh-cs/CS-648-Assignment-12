@@ -27,44 +27,35 @@ class ProductForm extends React.Component {
 
   render() {
     return (
-      <form onSubmit={this.handleSave} className="mt-4">
-        <div className="mb-3">
-          <label htmlFor="name" className="form-label">
-            Name
-          </label>
+      <form onSubmit={this.handleSave}>
+        <div className="form-group">
+          <label>Name</label>
           <input
             type="text"
-            id="name"
             name="name"
-            placeholder="Name"
+            placeholder="Enter product name"
             value={this.state.product.name}
             onChange={this.handleChange}
             className="form-control"
           />
         </div>
-        <div className="mb-3">
-          <label htmlFor="category" className="form-label">
-            Category
-          </label>
+        <div className="form-group">
+          <label>Category</label>
           <input
             type="text"
-            id="category"
             name="category"
-            placeholder="Category"
+            placeholder="Enter category"
             value={this.state.product.category}
             onChange={this.handleChange}
             className="form-control"
           />
         </div>
-        <div className="mb-3">
-          <label htmlFor="price" className="form-label">
-            Price
-          </label>
+        <div className="form-group">
+          <label>Price</label>
           <input
             type="text"
-            id="price"
             name="price"
-            placeholder="Price"
+            placeholder="Enter price"
             value={this.state.product.price}
             onChange={this.handleChange}
             className="form-control"

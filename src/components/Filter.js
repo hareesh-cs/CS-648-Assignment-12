@@ -4,13 +4,13 @@ function Filter({ filterText, onFilter }) {
   const handleChange = (e) => onFilter(e.target.value);
 
   return (
-    <form>
+    <form className="mb-4">
       <input
         type="text"
-        placeholder="Search..."
+        placeholder="Search products..."
         value={filterText}
         onChange={handleChange}
-        className="form-control"
+        className="form-control form-control-lg"
       />
     </form>
   );

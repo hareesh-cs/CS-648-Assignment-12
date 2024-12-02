@@ -11,8 +11,8 @@ function ProductTable({ products, filterText, onDestroy }) {
   });
 
   return (
-    <table className="table table-striped">
-      <thead>
+    <table className="table table-bordered table-hover shadow-sm">
+      <thead className="table-dark">
         <tr>
           <th>Name</th>
           <th>Category</th>
